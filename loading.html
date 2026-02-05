@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Processing Result</title>
+<style>
+body{text-align:center;font-family:Arial;padding:100px;}
+.bar{width:300px;height:25px;border:1px solid #000;margin:auto;}
+.fill{height:100%;width:0;background:black;}
+</style>
+</head>
+<body>
+
+<h2>Generating Marksheet...</h2>
+
+<div class="bar">
+<div class="fill" id="f"></div>
+</div>
+
+<script>
+let w=0;
+let i=setInterval(()=>{
+w+=5;
+document.getElementById("f").style.width=w+"%";
+if(w>=100){
+clearInterval(i);
+window.location.href="result.html";
+}
+},150);
+</script>
+
+</body>
+</html>

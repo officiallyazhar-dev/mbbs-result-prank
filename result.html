@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MBBS Result</title>
+<style>
+body{font-family:Segoe UI;background:#f2f4f8;text-align:center;padding:40px;}
+table{border-collapse:collapse;margin:auto;background:white;}
+td,th{border:1px solid #999;padding:10px;}
+.fail{color:red;font-weight:bold;}
+.pass{color:green;}
+.header{font-size:22px;font-weight:bold;color:#1c2e4a;}
+</style>
+</head>
+<body>
+
+<div class="header">Central Medical University</div>
+<h3>MBBS Second Professional Examination Result</h3>
+
+<p>Name: <span id="n"></span></p>
+<p>Enrollment: <span id="e"></span></p>
+
+<table>
+<tr><th>Subject</th><th>Theory</th><th>Practical</th><th>Status</th></tr>
+
+<tr>
+<td>Pharmacology</td>
+<td>66</td>
+<td>70</td>
+<td class="pass">PASS</td>
+</tr>
+
+<tr>
+<td>Pathology</td>
+<td>61</td>
+<td>64</td>
+<td class="pass">PASS</td>
+</tr>
+
+<tr>
+<td>Microbiology</td>
+<td>33</td>
+<td>55</td>
+<td class="fail">FAIL</td>
+</tr>
+
+</table>
+
+<br>
+<button onclick="reveal()">View Official Notice</button>
+
+<script>
+document.getElementById("n").innerText=localStorage.getItem("name");
+document.getElementById("e").innerText=localStorage.getItem("enroll");
+
+function reveal(){
+alert("😂 Relax bro — this was a prank!");
+}
+</script>
+
+</body>
+</html>
